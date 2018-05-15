@@ -9,6 +9,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { HttpServiceProvider } from '../providers/http-service/http-service';
+import { PlayasPage } from '../pages/playas/playas';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginPage } from '../pages/login/login';
 import { LoggedinPage } from '../pages/loggedin/loggedin';
 import { RegisterPage } from './../pages/register/register';
@@ -27,22 +30,30 @@ const firebaseAuth = {
   declarations: [
     MyApp,
     HomePage,
+    PlayasPage,
     LoginPage,
     RegisterPage,
+<<<<<<< HEAD
     LoggedinPage,
     IncidenciasPage
+=======
+    LoggedinPage
+>>>>>>> 7896b9e4866f0208ad97c716061c10f740197f77
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+    PlayasPage,
     LoginPage,
     RegisterPage,
     LoggedinPage,
@@ -51,7 +62,8 @@ const firebaseAuth = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpServiceProvider
   ]
 })
 export class AppModule {}
