@@ -3,29 +3,66 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+<<<<<<< HEAD
 import { HttpServiceProvider } from '../providers/http-service/http-service';
 import { PlayasPage } from '../pages/playas/playas';
 import { HttpClientModule } from '@angular/common/http';
+=======
+import { LoginPage } from '../pages/login/login';
+import { LoggedinPage } from '../pages/loggedin/loggedin';
+import { RegisterPage } from './../pages/register/register';
+
+const firebaseAuth = {
+  apiKey: "AIzaSyDecPLTcBODdn8fU9hUd9VFymsBZjSFaqk",
+  authDomain: "proyectogit-53439.firebaseapp.com",
+  databaseURL: "https://proyectogit-53439.firebaseio.com",
+  projectId: "proyectogit-53439",
+  storageBucket: "",
+  messagingSenderId: "746709652335"
+};
+>>>>>>> 48b5ceb09aae2c06e928893c01ba59702c4d2d67
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+<<<<<<< HEAD
     PlayasPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp)
+=======
+    LoginPage,
+    RegisterPage,
+    LoggedinPage,
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+>>>>>>> 48b5ceb09aae2c06e928893c01ba59702c4d2d67
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+<<<<<<< HEAD
     PlayasPage
+=======
+    LoginPage,
+    RegisterPage,
+    LoggedinPage
+>>>>>>> 48b5ceb09aae2c06e928893c01ba59702c4d2d67
   ],
   providers: [
     StatusBar,
