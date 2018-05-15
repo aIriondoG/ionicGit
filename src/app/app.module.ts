@@ -9,11 +9,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-<<<<<<< HEAD
 import { HttpServiceProvider } from '../providers/http-service/http-service';
 import { PlayasPage } from '../pages/playas/playas';
 import { HttpClientModule } from '@angular/common/http';
-=======
 import { LoginPage } from '../pages/login/login';
 import { LoggedinPage } from '../pages/loggedin/loggedin';
 import { RegisterPage } from './../pages/register/register';
@@ -26,43 +24,33 @@ const firebaseAuth = {
   storageBucket: "",
   messagingSenderId: "746709652335"
 };
->>>>>>> 48b5ceb09aae2c06e928893c01ba59702c4d2d67
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
-    PlayasPage
+    PlayasPage,
+    LoginPage,
+    RegisterPage,
+    LoggedinPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
-=======
-    LoginPage,
-    RegisterPage,
-    LoggedinPage,
-  ],
-  imports: [
-    BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseAuth),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
->>>>>>> 48b5ceb09aae2c06e928893c01ba59702c4d2d67
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
-    PlayasPage
-=======
+    PlayasPage,
     LoginPage,
     RegisterPage,
     LoggedinPage
->>>>>>> 48b5ceb09aae2c06e928893c01ba59702c4d2d67
   ],
   providers: [
     StatusBar,
