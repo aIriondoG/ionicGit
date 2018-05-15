@@ -12,6 +12,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { LoggedinPage } from '../pages/loggedin/loggedin';
 import { RegisterPage } from './../pages/register/register';
+import { IncidenciasPage } from './../pages/incidencias/incidencias'
 
 const firebaseAuth = {
   apiKey: "AIzaSyDecPLTcBODdn8fU9hUd9VFymsBZjSFaqk",
@@ -29,6 +30,7 @@ const firebaseAuth = {
     LoginPage,
     RegisterPage,
     LoggedinPage,
+    IncidenciasPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ const firebaseAuth = {
     HomePage,
     LoginPage,
     RegisterPage,
-    LoggedinPage
+    LoggedinPage,
+    IncidenciasPage
   ],
   providers: [
     StatusBar,
