@@ -28,7 +28,7 @@ export class LoggedinPage {
     console.log('ionViewDidLoad LoggedinPage');
   }
   tareas(){
-    this.navCtrl.push(TaskPage);
+    //this.navCtrl.push(TaskPage);
   }
 
 }

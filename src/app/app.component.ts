@@ -11,7 +11,7 @@ import { PlayasPage } from '../pages/playas/playas';
 })
 export class MyApp {
   //Poner el home
-  rootPage:any = PlayasPage;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
